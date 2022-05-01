@@ -17,11 +17,11 @@ setInterval(() => {
         greeting.innerText = "Good Morning " + user;
         body.classList.add("morning");
         title.innerText = "Good Morning";
-    } else if (hour >= 12 & hour < 6) {
+    } else if (hour >= 12 & hour < 18) {
         greeting.innerText = "Good Afternoon " + user;
         body.classList.add("afternoon");
         title.innerText = "Good Afternoon";
-    } else if (hour >= 6) {
+    } else if (hour >= 18) {
         greeting.innerText = "Good Evening " + user;
         body.classList.add("evening");
         title.innerText = "Good Everning";
