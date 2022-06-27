@@ -37,3 +37,13 @@ div.box {
 .evening {
     background-image: url('images/background4.jpg');
 }
+
+
+@media screen and (max-width: 500px) {
+    #time {
+        font-size: 70px;
+    }
+    #greeting {
+        font-size: 20px;
+    }
+}
