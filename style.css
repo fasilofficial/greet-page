@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+  font-family: 'Varela', sans-serif;
 }
 ul li {
   list-style: none;
@@ -32,16 +33,16 @@ div.box {
   font-size: 30px;
 }
 .night {
-  background-image: url("images/background1.jpg");
+  background-image: url("https://images.unsplash.com/photo-1537136102161-ea2262437412?auto=format&fit=crop&q=80&w=2026&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 .morning {
-  background-image: url("images/background3.jpg");
+  background-image: url("https://images.unsplash.com/photo-1470137430626-983a37b8ea46?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 .afternoon {
-  background-image: url("images/background2.jpg");
+  background-image: url("https://images.unsplash.com/photo-1516214104703-d870798883c5?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 .evening {
-  background-image: url("images/background4.jpg");
+  background-image: url("https://images.unsplash.com/photo-1538991383142-36c4edeaffde?auto=format&fit=crop&q=80&w=2071&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 ul.links {
   position: absolute;
