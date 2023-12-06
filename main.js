@@ -4,7 +4,13 @@ let date = document.getElementById("date");
 let greeting = document.getElementById("greeting");
 let body = document.querySelector("body");
 let title = document.querySelector("title");
+
 setInterval(() => {
+  updateDate();
+}, 1000);
+
+//function to update date and time
+const updateDate = () => {
   let Day = new Date();
   let hour = ("0" + Day.getHours()).slice(-2);
   let minute = ("0" + Day.getMinutes()).slice(-2);
@@ -12,6 +18,7 @@ setInterval(() => {
   let day = ("0" + Day.getDate()).slice(-2);
   let month = ("0" + Number(Day.getMonth() + 1)).slice(-2);
   let year = Day.getFullYear();
+
   time.innerText = `${hour}:${minute}:${second}`;
   date.innerText = `${day}/${month}/${year}`;
   if ((hour >= 0) & (hour < 5)) {
@@ -31,4 +38,4 @@ setInterval(() => {
     body.classList.add("evening");
     title.innerText = "Good Everning";
   }
-}, 1000);
+};
