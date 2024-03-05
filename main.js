@@ -9,7 +9,10 @@ setInterval(() => {
   updateDate();
 }, 1000);
 
-//function to update date and time
+setInterval(() => {
+  getCurrentLocation();
+}, 15 * 60 * 1000);
+
 const updateDate = () => {
   let Day = new Date();
   let hour = ("0" + Day.getHours()).slice(-2);
@@ -39,3 +42,39 @@ const updateDate = () => {
     title.innerText = "Good Everning";
   }
 };
+
+function fetchWeather(latitude, longitude) {
+  const apiKey = "c4885943eadf9be6247d524937f10a59";
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+
+  fetch(apiUrl)
+    .then((response) => response.json())
+    .then((data) => {
+      const temperature = data.main.temp;
+      document.getElementById("temperature").textContent = `${
+        Math.floor(temperature * 10) / 10
+      }°C`;
+    })
+    .catch((error) => {
+      console.error("Error fetching weather data:", error);
+    });
+}
+
+function getCurrentLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        fetchWeather(latitude, longitude);
+      },
+      (error) => {
+        console.error("Error getting current location:", error);
+      }
+    );
+  } else {
+    console.error("Geolocation is not supported by this browser.");
+  }
+}
+
+getCurrentLocation();

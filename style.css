@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Varela&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Varela', sans-serif;
 }
 ul li {
   list-style: none;
 }
 body {
+  font-family: "Varela", sans-serif;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -31,6 +31,9 @@ div.box {
 }
 #greeting {
   font-size: 30px;
+}
+#temperature {
+  margin: 1rem auto;
 }
 .night {
   background-image: url("https://images.unsplash.com/photo-1537136102161-ea2262437412?auto=format&fit=crop&q=80&w=2026&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
@@ -65,6 +68,7 @@ ul li {
 }
 ul li:hover {
   background-color: rgba(255, 255, 255, 0.7);
+  transform: scale(1.05);
 }
 ul.links li a {
   display: flex;
